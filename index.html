@@ -1,121 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planet Store</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
-        *{
-            box-sizing: border-box;
-            margin: o;
-            color: white;
-            font-weight: 200;
-            
-        }
-        body{
-            background-color: grey;
-             font-family: "Caprasimo", serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planet Store</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
 
-    header{
-        height: 80px;
-        display: flex ;
-        justify-content: space-around;
-        align-items: center;
-        border-bottom: 1px solid white;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      color: white;
+      font-weight: 200;
     }
-    ul{
-        list-style: none;
-        display: flex;
-        gap: 30px;
+
+    body {
+      background-color: grey;
+      font-family: "Caprasimo", serif;
     }
-    li a{
-        text-decoration: none;
-        color: white;
-        font-size: 20px;
-        border: 2px solid white;
+
+    header {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 1px solid white;
+      flex-wrap: wrap;
+    }
+
+    .MENU {
+      display: none;
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    li a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      border: 2px solid white;
+      padding: 10px;
+      border-radius: 50px;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: 600;
+      border: 2px solid white;
+      padding: 10px;
+    }
+
+    .signup {
+      background-color: white;
+      color: black;
+      margin-left: 150px;
+    }
+
+    .signup:hover {
+      background-color: black;
+      color: white;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      height: 90vh;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      margin: 0px 150px;
+    }
+
+    .left {
+      flex: 1;
+      font-size: 50px;
+      font-weight: 600;
+      border-right: 2px solid white;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mid {
+      flex: 2;
+      font-size: 20px;
+    }
+
+    .right {
+      flex: 1;
+    }
+
+    .right img {
+      width: 300px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 40%;
+      color: whitesmoke;
+    }
+
+    .btn:hover {
+      background-color: black;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
         padding: 10px;
-        border-radius: 50px;
-    }
-    .logo{
-        font-size: 30px;
-        font-weight: 600;
-        border: 2px solid white;
-        padding: 10px;
-    }
-    .signup{
-        background-color: white;
-        color: black;
-        margin-left: 150px;
-    }
-    .signup:hover{
-        background-color: black;
-        color: white;
-    }
-    main{
-        
-    display: flex;
-    height: 90vh;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    margin: 0px 150px;
-    }
-.left{
-    flex: 1;
-    font-size: 50px;
-    font-weight: 600;
-    border-right: 2px solid white;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mid{
-    flex: 2;
-    font-size: 20px;
-   ;}
-    .right{
-        flex: 1;
       }
-.right img{
-    width: 300px;}
-.btn{
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 20px;
-border-radius: 40%;
-color: whitesmoke;}
-.btn:hover{
-    background-color: black;}
-    </style>
+
+      .MENU {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        width: 100%;
+      }
+
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .signup {
+        margin-left: 0;
+      }
+
+      main {
+        flex-direction: column;
+        margin: 20px;
+        height: auto;
+      }
+
+      .left {
+        border-right: none;
+        border-bottom: 2px solid white;
+        height: auto;
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+
+      .right img {
+        width: 100%;
+        height: auto;
+      }
+
+      .mid {
+        font-size: 18px;
+      }
+
+      .btn {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo"> Planeterium </div>
-        <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Discounts</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Buy Now</a></li>
-              <li><a href="#">Sell Now</a></li>
-              <li><a href="#" class="signup">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-<div class="left">
-   <h2> Mercury</h2>
-</div>
-<div class="mid">
-    <p>Mercury is the first planet from the Sun and the smallest in the Solar System. It is a rocky planet with a trace atmosphere and a surface gravity slightly higher than that of Mars. The surface of Mercury is similar to Earth's Moon, being heavily cratered, with an expansive rupes system generated from thrust faults, and bright ray systems, formed by ejecta. Its largest crater, Caloris Planitia, has a diameter of 1,550 km (960 mi), which is about one-third the diameter of the planet (4,880 km or 3,030 mi). Being the most inferior orbiting planet, it always appears close to the sun in Earth's sky, either as a "morning star" or an "evening star.” It is also the planet with the highest delta-v needed to travel to and from all other planets of the Solar System.</p>
-    <button class="btn">Buy Now</button>
-</div>
-<div class="right">
-    <img src="Assets/Mercury.jpg" alt="Mercury">
-</div>
-    </main>
+  <header>
+    <div class="logo"> Planeterium </div>
+
+    <!-- MENU BUTTON -->
+    <button class="MENU" onclick="toggleMenu()">MENU</button>
+
+    <!-- NAVBAR -->
+    <nav id="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Discounts</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Buy Now</a></li>
+        <li><a href="#">Sell Now</a></li>
+        <li><a href="#" class="signup">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="left">
+      <h2>Mercury</h2>
+    </div>
+    <div class="mid">
+      <p>
+        Mercury is the first planet from the Sun and the smallest in the Solar
+        System. It is a rocky planet with a trace atmosphere and a surface
+        gravity slightly higher than that of Mars. The surface of Mercury is
+        similar to Earth's Moon, being heavily cratered, with an expansive rupes
+        system generated from thrust faults, and bright ray systems, formed by
+        ejecta. Its largest crater, Caloris Planitia, has a diameter of 1,550 km
+        (960 mi), which is about one-third the diameter of the planet (4,880 km
+        or 3,030 mi). Being the most inferior orbiting planet, it always appears
+        close to the sun in Earth's sky, either as a "morning star" or an
+        "evening star.” It is also the planet with the highest delta-v needed to
+        travel to and from all other planets of the Solar System.
+      </p>
+      <button class="btn">Buy Now</button>
+    </div>
+    <div class="right">
+      <img src="Assets/Mercury.jpg" alt="Mercury" />
+    </div>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
