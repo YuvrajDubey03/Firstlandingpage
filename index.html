@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,181 +7,161 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
 
-<style>
-  /* ---------- GLOBAL ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Caprasimo", serif;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Caprasimo", serif;
+    }
 
-body {
-  background: linear-gradient(135deg, #1d2671, #c33764);
-  min-height: 100vh;
-  color: white;
-}
+    body {
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      min-height: 100vh;
+      color: white;
+    }
 
-/* ---------- HEADER ---------- */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-  backdrop-filter: blur(10px);
-}
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(10px);
+      flex-wrap: wrap;
+    }
 
-.logo {
-  font-size: 28px;
-  padding: 8px 20px;
-  border-radius: 30px;
-  background: linear-gradient(45deg, #ff512f, #dd2476);
-}
+    .logo {
+      font-size: 28px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #ff512f, #dd2476);
+    }
 
-/* ---------- NAV ---------- */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  padding: 8px 18px;
-  border-radius: 30px;
-  background: rgba(255,255,255,0.15);
-  transition: 0.3s;
-}
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 8px 18px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.15);
+      transition: 0.3s;
+    }
 
-nav a:hover {
-  background: white;
-  color: black;
-}
+    nav a:hover {
+      background: white;
+      color: black;
+    }
 
-.signup {
-  background: linear-gradient(45deg, #00c6ff, #0072ff);
-}
+    .signup {
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+    }
 
-/* ---------- MENU BUTTON ---------- */
-.MENU {
-  display: none;
-  background: linear-gradient(45deg, #f7971e, #ffd200);
-  color: black;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-}
+    .MENU {
+      display: none;
+      background: linear-gradient(45deg, #f7971e, #ffd200);
+      border: none;
+      padding: 8px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
 
-/* ---------- MAIN GRID ---------- */
-main {
-  padding: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
+    /* MAIN */
+    main {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
 
-/* ---------- PLANET CARD ---------- */
-.planet {
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.25),
-    rgba(255,255,255,0.05)
-  );
-  border-radius: 20px;
-  padding: 25px;
-  text-align: center;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  transition: 0.4s;
-}
+    .planet {
+      background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.25),
+        rgba(255,255,255,0.05)
+      );
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: 0.4s;
+    }
 
-.planet:hover {
-  transform: translateY(-12px) scale(1.03);
-}
+    .planet:hover {
+      transform: translateY(-10px) scale(1.03);
+    }
 
-.planet img {
-  width: 180px;
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.4));
-}
+    .planet img {
+      width: 170px;
+    }
 
-.planet h2 {
-  font-size: 32px;
-  margin: 15px 0;
-  background: linear-gradient(45deg, #ffecd2, #fcb69f);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+    .planet h2 {
+      font-size: 30px;
+      margin: 15px 0;
+      background: linear-gradient(45deg, #ffecd2, #fcb69f);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
+    .planet p {
+      font-size: 15px;
+      opacity: 0.9;
+    }
 
-.planet p {
-  font-size: 16px;
-  line-height: 1.5;
-  opacity: 0.9;
-}
+    .btn {
+      margin-top: 15px;
+      padding: 10px 25px;
+      border-radius: 30px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      background: linear-gradient(45deg, #43e97b, #38f9d7);
+      transition: 0.3s;
+    }
 
-/* ---------- BUTTON ---------- */
-.btn {
-  margin-top: 18px;
-  padding: 10px 30px;
-  border-radius: 30px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(45deg, #43e97b, #38f9d7);
-  color: black;
-  transition: 0.3s;
-}
+    .btn:hover {
+      background: linear-gradient(45deg, #fa709a, #fee140);
+    }
 
-.btn:hover {
-  transform: scale(1.1);
-  background: linear-gradient(45deg, #fa709a, #fee140);
-}
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .MENU {
+        display: block;
+      }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-  .MENU {
-    display: block;
-  }
+      nav {
+        display: none;
+        width: 100%;
+        margin-top: 15px;
+      }
 
-  nav {
-    display: none;
-    width: 100%;
-    margin-top: 15px;
-  }
+      nav.active {
+        display: block;
+      }
 
-  nav.active {
-    display: block;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  header {
-    align-items: flex-start;
-  }
-
-  main {
-    padding: 25px;
-  }
-}
-
-</style>
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
   <div class="logo">Planeterium</div>
-
   <button class="MENU" onclick="toggleMenu()">MENU</button>
-
   <nav id="nav">
     <ul>
       <li><a href="#">Home</a></li>
@@ -195,65 +174,14 @@ main {
 </header>
 
 <main>
-
-  <!-- MERCURY -->
-  <div class="planet">
-    <img src="Assets/Mercury.jpg" alt="Mercury">
-    <h2>Mercury</h2>
-    <p>Closest planet to the Sun. Small, rocky, and extreme temperatures.</p>
-    <button class="btn">Buy Now</button>
-  </div>
-
-  <!-- VENUS -->
-  <div class="planet">
-    <img src="Assets/venus.webp" alt="Venus">
-    <h2>Venus</h2>
-    <p>The hottest planet with thick clouds and toxic atmosphere.</p>
-    <button class="btn">Buy Now</button>
-  </div>
-
-  <!-- MARS -->
-  <div class="planet">
-    <img src="Assets/mars.webp" alt="Mars">
-    <h2>Mars</h2>
-    <p>The red planet, known for dust storms and signs of ancient water.</p>
-    <button class="btn">Buy Now</button>
-  </div>
-
-  <!-- JUPITER -->
-  <div class="planet">
-    <img src="Assets/jupiter.webp" alt="Jupiter">
-    <h2>Jupiter</h2>
-    <p>The largest planet with a massive storm called the Great Red Spot.</p>
-    <button class="btn">Buy Now</button>
-  </div>
-
-  <!-- SATURN -->
-  <div class="planet">
-    <img src="Assets/saturn.webp" alt="Saturn">
-    <h2>Saturn</h2>
-    <p>Famous for its beautiful ring system made of ice and rock.</p>
-    <button class="btn">Buy Now</button>
-  </div>
-
-  <!-- URANUS -->
-  <div class="planet">
-    <img src="Assets/uranus.webp" alt="Uranus">
-    <h2>Uranus</h2>
-    <p>An ice giant that rotates on its side with extreme seasons.</p>
-    <button class="btn">Buy Now</button>
-  </div>
-
-  <!-- NEPTUNE -->
-  <div class="planet">
-    <img src="Assets/neptune.webp" alt="Neptune">
-    <h2>Neptune</h2>
-    <p>The farthest planet, known for strong winds and deep blue color.</p>
-    <button class="btn">Buy Now</button>
-  </div>
-
+  <div class="planet"><img src="Assets/Mercury.jpg"><h2>Mercury</h2><p>Closest planet to the Sun.</p><button class="btn">Buy Now</button></div>
+  <div class="planet"><img src="Assets/venus.webp"><h2>Venus</h2><p>Hottest planet.</p><button class="btn">Buy Now</button></div>
+  <div class="planet"><img src="Assets/mars.webp"><h2>Mars</h2><p>The red planet.</p><button class="btn">Buy Now</button></div>
+  <div class="planet"><img src="Assets/jupiter.webp"><h2>Jupiter</h2><p>Largest planet.</p><button class="btn">Buy Now</button></div>
+  <div class="planet"><img src="Assets/saturn.webp"><h2>Saturn</h2><p>Ringed planet.</p><button class="btn">Buy Now</button></div>
+  <div class="planet"><img src="Assets/uranus.webp"><h2>Uranus</h2><p>Ice giant.</p><button class="btn">Buy Now</button></div>
+  <div class="planet"><img src="Assets/neptune.webp"><h2>Neptune</h2><p>Farthest planet.</p><button class="btn">Buy Now</button></div>
 </main>
-
 
 <script>
   function toggleMenu() {
@@ -263,239 +191,3 @@ main {
 
 </body>
 </html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Planet Store</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      color: white;
-      font-weight: 200;
-    }
-
-    body {
-      background-color: grey;
-      font-family: "Caprasimo", serif;
-    }
-
-    header {
-      height: 80px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      border-bottom: 1px solid white;
-      flex-wrap: wrap;
-    }
-
-    .MENU {
-      display: none;
-      background-color: black;
-      color: white;
-      border: 2px solid white;
-      padding: 10px 20px;
-      border-radius: 50px;
-      cursor: pointer;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      padding: 0;
-      margin: 0;
-    }
-
-    li a {
-      text-decoration: none;
-      color: white;
-      font-size: 20px;
-      border: 2px solid white;
-      padding: 10px;
-      border-radius: 50px;
-    }
-
-    .logo {
-      font-size: 30px;
-      font-weight: 600;
-      border: 2px solid white;
-      padding: 10px;
-    }
-
-    .signup {
-      background-color: white;
-      color: black;
-      margin-left: 150px;
-    }
-
-    .signup:hover {
-      background-color: black;
-      color: white;
-    }
-
-    main {
-      display: flex;
-      flex-wrap: wrap;
-      height: 90vh;
-      justify-content: space-evenly;
-      align-items: center;
-      text-align: center;
-      margin: 0px 150px;
-    }
-
-    .left {
-      flex: 1;
-      font-size: 50px;
-      font-weight: 600;
-      border-right: 2px solid white;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .mid {
-      flex: 2;
-      font-size: 20px;
-    }
-
-    .right {
-      flex: 1;
-    }
-
-    .right img {
-      width: 300px;
-    }
-
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 20px;
-      border-radius: 40%;
-      color: whitesmoke;
-    }
-
-    .btn:hover {
-      background-color: black;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-      }
-
-      .MENU {
-        display: block;
-      }
-
-      nav {
-        display: none;
-        width: 100%;
-      }
-
-      nav.active {
-        display: block;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-      }
-
-      .signup {
-        margin-left: 0;
-      }
-
-      main {
-        flex-direction: column;
-        margin: 20px;
-        height: auto;
-      }
-
-      .left {
-        border-right: none;
-        border-bottom: 2px solid white;
-        height: auto;
-        font-size: 30px;
-        margin-bottom: 20px;
-      }
-
-      .right img {
-        width: 100%;
-        height: auto;
-      }
-
-      .mid {
-        font-size: 18px;
-      }
-
-      .btn {
-        font-size: 18px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo"> Planeterium </div>
-
-    <!-- MENU BUTTON -->
-    <button class="MENU" onclick="toggleMenu()">MENU</button>
-
-    <!-- NAVBAR -->
-    <nav id="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Discounts</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Buy Now</a></li>
-        <li><a href="#">Sell Now</a></li>
-        <li><a href="#" class="signup">Sign Up</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <div class="left">
-      <h2>Mercury</h2>
-    </div>
-    <div class="mid">
-      <p>
-        Mercury is the first planet from the Sun and the smallest in the Solar
-        System. It is a rocky planet with a trace atmosphere and a surface
-        gravity slightly higher than that of Mars. The surface of Mercury is
-        similar to Earth's Moon, being heavily cratered, with an expansive rupes
-        system generated from thrust faults, and bright ray systems, formed by
-        ejecta. Its largest crater, Caloris Planitia, has a diameter of 1,550 km
-        (960 mi), which is about one-third the diameter of the planet (4,880 km
-        or 3,030 mi). Being the most inferior orbiting planet, it always appears
-        close to the sun in Earth's sky, either as a "morning star" or an
-        "evening star.” It is also the planet with the highest delta-v needed to
-        travel to and from all other planets of the Solar System.
-      </p>
-      <button class="btn">Buy Now</button>
-    </div>
-    <div class="right">
-      <img src="Assets/Mercury.jpg" alt="Mercury" />
-    </div>
-  </main>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('nav');
-      nav.classList.toggle('active');
-    }
-  </script>
-</body>
-</html>
-
